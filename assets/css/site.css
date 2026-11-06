@@ -515,11 +515,9 @@ a.topic-card:hover .topic-title {
 .topic-card.is-soon .topic-title {
   color: var(--soon-text);
 }
-.topic-card:target,
-.unit:target .unit-head,
-.group:target > h3 {
-  outline: 3px solid var(--focus);
-  outline-offset: 3px;
+/* Sections focused after a #link jump (tabindex="-1") show no box. */
+[tabindex="-1"]:focus {
+  outline: none;
 }
 .topic-head {
   display: flex;
